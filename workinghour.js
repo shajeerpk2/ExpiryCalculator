@@ -111,7 +111,7 @@ function msToTime(duration) {
     var milliseconds = Math.floor((duration % 1000) / 100),
     seconds = Math.floor((duration / 1000) % 60),
     minutes = Math.floor((duration / (1000 * 60)) % 60),
-    //minutes=(minutes/60)*100
+    minutes=Math.floor((minutes/60)*100)
     hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
     return Number(hours) + "." + Number(minutes);
 }
